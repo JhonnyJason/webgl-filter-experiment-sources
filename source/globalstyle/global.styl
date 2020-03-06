@@ -1,0 +1,72 @@
+/*==========================================================
+Global variables and styles
+==========================================================*/
+max-content-width = 950px
+inner-content-width = 750px
+mobile-side-padding = 15px
+
+/*==========================================================
+CD global font styles
+==========================================================*/
+body
+    color: #575756
+    width 100%
+    font-family: Arial, Helvetica, sans-serif
+    line-height: 150%
+
+/*==========================================================
+CD font styles
+==========================================================*/
+// H1 HEADLINE 17pt Laufweite 200
+h1
+    font-size: 17pt
+    letter-spacing: 3.4pt
+    text-transform: uppercase
+    margin-bottom 30px
+// H2 Headline 15pt Laufweite 200
+h2
+    font-size: 15pt
+    letter-spacing: 3pt
+    margin-bottom 20px
+// Text 12pt Laufweite 0
+p
+    font-size: 12pt
+    letter-spacing: normal
+    margin-bottom 10px
+
+ul
+    list-style-type: circle
+    list-style-position: inside
+    margin-bottom 50px
+
+/*==========================================================
+CD color variables
+==========================================================*/
+
+/*==========================================================
+Global Element Style
+==========================================================*/
+.inner-content
+    margin auto
+    max-width: inner-content-width
+    padding-left: mobile-side-padding
+    padding-right: mobile-side-padding
+
+.max-content
+    margin auto
+    max-width: max-content-width
+    padding-left: mobile-side-padding
+    padding-right: mobile-side-padding
+
+
+paddingless-max-content-width = (max-content-width + (2 * mobile-side-padding))
+@media screen and (min-width: paddingless-max-content-width)
+    .max-content
+        padding-left: 0
+        padding-right: 0
+
+paddingless-inner-content-width = (inner-content-width + (2 * mobile-side-padding))
+@media screen and (min-width: paddingless-inner-content-width)
+    .inner-content
+        padding-left: 0
+        padding-right: 0

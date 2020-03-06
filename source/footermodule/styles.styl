@@ -1,0 +1,126 @@
+// footer styles
+/*=====================================================
+Variables to tweak the style 
+=====================================================*/
+footer-content-padding-top = 30px
+footer-content-padding-bottom = 30px
+mobile-footer-block-gap = 50px
+
+center-column-width = 200px
+edge-column-min-width = 220px
+
+social-icon-size = 30px
+decoration-claim-height = 30px
+social-media-icons-gap = 8px
+social-media-icons-to-decoration-claim-gap = 5px
+
+up-button-size = 50px
+up-arrow-size = 15px
+up-arrow-size = 15px
+
+/*==========================================================
+Serious Stuff
+==========================================================*/
+#footer
+    background-color footer-background
+    color white
+
+#footer-content
+    padding-top footer-content-padding-top
+    padding-bottom footer-content-padding-bottom
+    display: grid
+    grid-template-columns: 1fr center-column-width 1fr
+/*=====================================================
+Grid Blocks
+===================================================*/    
+#contact-block.lit
+    background-color alpha(grey, 0.4)
+#contact-block
+    transition background 0.4s
+    h1 
+        margin-bottom 30px
+    #contact-address
+        margin-top 30px
+
+#social-media-block
+    align-self: start
+    justify-self center
+    text-align: center
+    #facebook-icon
+        display inline-block
+        background-image url("/img/facebook-icon.svg")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        width social-icon-size
+        height social-icon-size
+        margin-right social-media-icons-gap
+    #instagram-icon
+        display inline-block
+        background-image url("/img/instagram-icon.svg")
+        background-size: cover
+        background-position center
+        background-repeat: no-repeat
+        width: social-icon-size
+        height social-icon-size
+    #decoration-claim
+        background-image: url("/img/claim.svg")
+        background-repeat: no-repeat
+        background-size contain
+        background-position center
+        margin-top social-media-icons-to-decoration-claim-gap
+        height decoration-claim-height
+        width center-column-width
+
+#more-information-block
+    text-align right
+    h2
+        margin-bottom 30px
+    a
+        display block
+        text-decoration: underline
+
+#footer-links-block
+    align-self: end
+    a
+        margin-right 7px
+
+#up-button-block
+    justify-self: center
+    align-self: center
+    #up-button
+        background-color white
+        position relative
+        border-radius 50%
+        height up-button-size
+        width up-button-size
+        cursor: pointer
+    #up-arrow
+        position absolute
+        width up-arrow-size
+        height up-arrow-size
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        fill footer-background
+
+#copyright-block
+    text-align: right
+    align-self: end
+    p
+        line-height: 150%
+
+/*=====================================================
+Responsive Parts
+===================================================*/
+min-width-for-full-grid = ((2 * edge-column-min-width) + center-column-width + (2 * mobile-side-padding))
+@media screen and (max-width: min-width-for-full-grid)
+    #footer-content
+        grid-template-columns: auto
+        grid-row-gap mobile-footer-block-gap
+    #contact-block
+        text-align: center
+    #more-information-block
+        text-align: center
+    #footer-links-block
+        text-align: center
