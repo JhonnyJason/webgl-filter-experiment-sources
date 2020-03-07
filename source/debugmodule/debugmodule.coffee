@@ -9,6 +9,7 @@ debugmodule.modulesToDebug =
     unbreaker: true
     # configmodule: true
     # headermodule: true
+    filtersettingsmodule: true
     sourceimagemodule: true
     outputimagemodule: true
     transformmodule:true

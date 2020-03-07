@@ -1,16 +1,36 @@
 // menu styles
 #menu
+    display flex
+    justify-content: center
     background-color rgba(0, 0, 0, 0.2)
+    box-sizing: border-box
     padding 10px
     width: 100%
     margin-bottom 20px
+    
+    .active
+        border solid 3px #92B158
 
-#go-icon
+#menu > svg
+    border solid 3px transparent
     width: 40px
     height: 40px
-    background-image: url(/img/arrow-white.svg)
-    background-size: contain
-    background-position: center
-    background-repeat: no-repeat
-    transform: rotate(90deg)
+    margin-left 20px
+    color white
     cursor: pointer
+
+#filter-settings-icon
+    margin-left 200px !important
+
+// #go-icon
+//     width: 40px
+//     height: 40px
+//     background-image: url(/img/arrow-white.svg)
+//     background-size: contain
+//     background-position: center
+//     background-repeat: no-repeat
+//     transform: rotate(90deg)
+//     cursor: pointer
+
+// #cam-icon
+// #image-icon

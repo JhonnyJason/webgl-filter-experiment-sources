@@ -9,10 +9,7 @@ mobile-side-padding = 15px
 CD global font styles
 ==========================================================*/
 body
-    color: #575756
-    width 100%
-    font-family: Arial, Helvetica, sans-serif
-    line-height: 150%
+    color: #012
 
 /*==========================================================
 CD font styles
@@ -46,27 +43,3 @@ CD color variables
 /*==========================================================
 Global Element Style
 ==========================================================*/
-.inner-content
-    margin auto
-    max-width: inner-content-width
-    padding-left: mobile-side-padding
-    padding-right: mobile-side-padding
-
-.max-content
-    margin auto
-    max-width: max-content-width
-    padding-left: mobile-side-padding
-    padding-right: mobile-side-padding
-
-
-paddingless-max-content-width = (max-content-width + (2 * mobile-side-padding))
-@media screen and (min-width: paddingless-max-content-width)
-    .max-content
-        padding-left: 0
-        padding-right: 0
-
-paddingless-inner-content-width = (inner-content-width + (2 * mobile-side-padding))
-@media screen and (min-width: paddingless-inner-content-width)
-    .inner-content
-        padding-left: 0
-        padding-right: 0

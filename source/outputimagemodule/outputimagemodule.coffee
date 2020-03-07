@@ -10,8 +10,8 @@ print = (arg) -> console.log(arg)
 #endregion
 
 ############################################################
-canvasWidth = 500
-canvasHeight = 500
+canvasWidth = 300
+canvasHeight = 300
 
 ############################################################
 canvas = null
@@ -27,21 +27,9 @@ outputimagemodule.initialize = () ->
     return
 
 ############################################################
-outputimagemodule.putImage = (matrix) ->
-    array = new Uint8ClampedArray(matrix.data, matrix.cols, matrix.rows)
-    imageData = new ImageData(array)
-
-    context.clearRect(0,0,canvasWidth, canvasHeight)
-    context.putImageData(imageData, 0, 0)
-    return
-
 outputimagemodule.putImageData = (imageData) ->
     context.clearRect(0,0,canvasWidth, canvasHeight)
     context.putImageData(imageData, 0, 0)
-    return
-
-outputimagemodule.showMatrix = (matrix) ->
-    cv.imshow(canvas, matrix)
     return
 
 module.exports = outputimagemodule
