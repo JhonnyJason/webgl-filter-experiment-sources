@@ -6,6 +6,7 @@ import imageselectmodule from "./imageselectmodule"
 import menumodule from "./menumodule"
 import outputimagemodule from "./outputimagemodule"
 import sourceimagemodule from "./sourceimagemodule"
+import svgiconsmodule from "./svgiconsmodule"
 import transformmodule from "./transformmodule"
 import upbuttonmodule from "./upbuttonmodule"
 import vanillautilmodule from "./vanillautilmodule"
@@ -19,6 +20,7 @@ Modules = {
     menumodule,
     outputimagemodule,
     sourceimagemodule,
+    svgiconsmodule,
     transformmodule,
     upbuttonmodule,
     vanillautilmodule,

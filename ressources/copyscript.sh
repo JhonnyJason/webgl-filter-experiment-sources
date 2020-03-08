@@ -5,16 +5,13 @@
 ## The output module is the document-root of what is served on deployment
 
 mkdir -p output/img
-mkdir -p output/fonts
+mkdir -p output/font
 
 ## app files
-cp sources/ressources/fonts/* output/fonts/
+cp sources/ressources/font/* output/font/
 cp sources/ressources/img/* output/img/
 
-cp sources/ressources/Datenschutzerklärung-HerzmitSeele.pdf output/Datenschutzerklärung-HerzmitSeele.pdf
-cp sources/ressources/Widerrufsbelehrung-HerzmitSeele.pdf output/Widerrufsbelehrung-HerzmitSeele.pdf
-cp sources/ressources/AAB-HerzmitSeele.pdf output/AAB-HerzmitSeele.pdf
-cp sources/ressources/favicons/* output/
-cp sources/ressources/manifests/* output/
+cp sources/ressources/favicon/* output/
+cp sources/ressources/manifest/* output/
 
 echo 0

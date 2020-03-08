@@ -29,7 +29,7 @@ video = null
 
 ############################################################
 intervalId = 0
-redrawElement = null
+redrawImage = new Image()
 
 ############################################################
 sourceimagemodule.initialize = () ->
@@ -40,6 +40,8 @@ sourceimagemodule.initialize = () ->
     image = document.getElementById("hidden-source-image")
     video = document.getElementById("hidden-source-video")
     image.addEventListener("load", imageLoaded)
+    # fast fix untuitive capture of video ;-)
+    canvas.addEventListener("click", sourceimagemodule.captureCamImage)
 
     canvas.width = canvasWidth
     canvas.height = canvasHeight
@@ -50,11 +52,16 @@ sourceimagemodule.initialize = () ->
     
 ############################################################
 #region internalFunctions
+captureRedrawImage = ->
+    dataURL = canvas.toDataURL("image/png")
+    redrawImage.src = dataURL
+    return
+
 drawImageToContext = ->
     log "drawImage"
     context.clearRect(0,0,canvasWidth, canvasHeight)
     context.drawImage(image, 0, 0, canvasWidth, canvasHeight)
-    redrawElement = image
+    captureRedrawImage()
     return
 
 startVideoDrawing = ->
@@ -72,7 +79,7 @@ stopVideoDrawing = ->
 drawVideoToContext = ->
     context.clearRect(0,0,canvasWidth, canvasHeight)
     context.drawImage(video, 0, 0, canvasWidth, canvasHeight)
-    redrawElement = video
+    captureRedrawImage()
     return
 
 imageLoaded = ->
@@ -88,7 +95,7 @@ imageLoaded = ->
 sourceimagemodule.setContextFilter = (filter) ->
     context.filter = filter
     context.clearRect(0,0,canvasWidth, canvasHeight)
-    context.drawImage(redrawElement, 0, 0, canvasWidth, canvasHeight)
+    context.drawImage(redrawImage, 0, 0, canvasWidth, canvasHeight)
     return
 
 sourceimagemodule.getImageData = ->
