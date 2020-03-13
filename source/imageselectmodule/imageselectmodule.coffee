@@ -26,10 +26,10 @@ imageselectmodule.initialize = () ->
     imageselectInput = document.getElementById("imageselect-input")
     captureIcon = document.getElementById("capture-icon")
 
-    imageselectInput.addEventListener("change", imageselectInputChanged)
-    captureIcon.addEventListener("click", captureIconClicked)
+    # imageselectInput.addEventListener("change", imageselectInputChanged)
+    # captureIcon.addEventListener("click", captureIconClicked)
 
-    imageselect.classList.add("image")
+    # imageselect.classList.add("image")
     return
 
 ############################################################

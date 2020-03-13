@@ -45,15 +45,15 @@ filtersettingsmodule.initialize = () ->
     invertInput = document.getElementById("invert-input")
     resetButton = document.getElementById("reset-button")
 
-    blurInput.addEventListener("change", blurInputChanged)
-    contrastInput.addEventListener("change", contrastInputChanged)
-    saturateInput.addEventListener("change", saturateInputChanged)
-    grayscaleInput.addEventListener("change", grayscaleInputChanged)
-    invertInput.addEventListener("change", invertInputChanged)
-    resetButton.addEventListener("click", resetButtonClicked)
+    # blurInput.addEventListener("change", blurInputChanged)
+    # contrastInput.addEventListener("change", contrastInputChanged)
+    # saturateInput.addEventListener("change", saturateInputChanged)
+    # grayscaleInput.addEventListener("change", grayscaleInputChanged)
+    # invertInput.addEventListener("change", invertInputChanged)
+    # resetButton.addEventListener("click", resetButtonClicked)
 
-    assignCurrentValues()
-    transform.adjustContextFilter(contextConfigObject)
+    # assignCurrentValues()
+    # transform.adjustContextFilter(contextConfigObject)
     return
 
 ############################################################

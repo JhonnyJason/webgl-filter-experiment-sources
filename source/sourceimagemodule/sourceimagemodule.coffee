@@ -39,15 +39,15 @@ sourceimagemodule.initialize = () ->
     canvas = document.getElementById("sourceimage")
     image = document.getElementById("hidden-source-image")
     video = document.getElementById("hidden-source-video")
-    image.addEventListener("load", imageLoaded)
+    # image.addEventListener("load", imageLoaded)
     # fast fix untuitive capture of video ;-)
-    canvas.addEventListener("click", sourceimagemodule.captureCamImage)
+    # canvas.addEventListener("click", sourceimagemodule.captureCamImage)
 
-    canvas.width = canvasWidth
-    canvas.height = canvasHeight
-    context = canvas.getContext("2d");
-    # context.drawImage(image, 7, 35, 290, 66);
-    drawImageToContext()
+    # canvas.width = canvasWidth
+    # canvas.height = canvasHeight
+    # context = canvas.getContext("2d");
+    # # context.drawImage(image, 7, 35, 290, 66);
+    # drawImageToContext()
     return
     
 ############################################################
@@ -93,13 +93,13 @@ imageLoaded = ->
 ############################################################
 #region exposedFunctions
 sourceimagemodule.setContextFilter = (filter) ->
-    context.filter = filter
-    context.clearRect(0,0,canvasWidth, canvasHeight)
-    context.drawImage(redrawImage, 0, 0, canvasWidth, canvasHeight)
+    # context.filter = filter
+    # context.clearRect(0,0,canvasWidth, canvasHeight)
+    # context.drawImage(redrawImage, 0, 0, canvasWidth, canvasHeight)
     return
 
 sourceimagemodule.getImageData = ->
-    return context.getImageData(0,0, canvasWidth, canvasHeight)
+    # return context.getImageData(0,0, canvasWidth, canvasHeight)
 
 ############################################################
 sourceimagemodule.setAsSourceFile = (file) ->

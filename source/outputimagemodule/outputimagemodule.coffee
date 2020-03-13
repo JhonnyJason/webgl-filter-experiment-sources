@@ -20,10 +20,10 @@ context = null
 ############################################################
 outputimagemodule.initialize = () ->
     log "outputimagemodule.initialize"
-    canvas = document.getElementById("outputimage")
-    canvas.width = canvasWidth
-    canvas.height = canvasHeight
-    context = canvas.getContext("2d")
+    # canvas = document.getElementById("outputimage")
+    # canvas.width = canvasWidth
+    # canvas.height = canvasHeight
+    # context = canvas.getContext("2d")
     return
 
 ############################################################

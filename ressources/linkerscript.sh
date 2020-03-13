@@ -5,8 +5,8 @@
 
 pushd testing/document-root
 
-ln -sf ../../sources/ressources/font font/
-ln -sf ../../sources/ressources/img img/
+ln -sfT ../../sources/ressources/font/ ./font
+ln -sfT ../../sources/ressources/img/ ./img
 
 ln -sf ../../sources/ressources/manifest/* .
 ln -sf ../../sources/ressources/favicon/* .

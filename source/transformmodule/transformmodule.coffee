@@ -82,10 +82,10 @@ transformmodule.adjustTransformationPipeline = (configObject) ->
     
 transformmodule.act = ->
     log "transformmodule.act"
-    source.setContextFilter(contextFilter)
-    imageData = source.getImageData()
-    imageData = runTransformationPipeline(imageData)
-    output.putImageData(imageData)
+    # source.setContextFilter(contextFilter)
+    # imageData = source.getImageData()
+    # imageData = runTransformationPipeline(imageData)
+    # output.putImageData(imageData)
     return
 
 module.exports = transformmodule

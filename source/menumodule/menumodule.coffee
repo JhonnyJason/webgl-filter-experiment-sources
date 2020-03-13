@@ -15,14 +15,6 @@ imageSelect = null
 filterSettings = null
 
 ############################################################
-#region HTMLElements
-# goIcon = null
-imageIcon = null
-camIcon = null
-filterSettingsIcon = null
-#endregion
-
-############################################################
 activeSource = ""
 activeFilterSettings = false
 
@@ -33,13 +25,11 @@ menumodule.initialize = () ->
     imageSelect = allModules.imageselectmodule
     filterSettings = allModules.filtersettingsmodule
 
-    camIcon = document.getElementById("cam-icon")
-    imageIcon = document.getElementById("image-icon")
-    filterSettingsIcon = document.getElementById("filter-settings-icon")
+    # filterSettingsIcon = document.getElementById("filter-settings-icon")
 
     camIcon.addEventListener("click", camIconClicked)
     imageIcon.addEventListener("click", imageIconClicked)
-    filterSettingsIcon.addEventListener("click", filterSettingsIconClicked)
+    # filterSettingsIcon.addEventListener("click", filterSettingsIconClicked)
 
     imageIcon.classList.add("active")
     return
